@@ -60,6 +60,12 @@
 // console.log(a.name);
 // ! ----------------------------------------------
 // var a=5;a=6;a=7;a=5,a=6;let b=15;var c=a+b;console.log(c); // ! 21
-// ! ----------------------------------------------
 
 
+// TODO Htmle fonksiyonlarla hükmedelim.
+function changeHtml(){
+ document.querySelector("h1");
+ document.querySelector("p");
+}
+
+changeHtml();
