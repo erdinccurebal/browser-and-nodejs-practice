@@ -128,14 +128,24 @@ function alerting () {
 //     runTest.style.backgroundColor = "green";
 // }
 // ! ----------------------------------------------
-const body = document.body;
-body.style.height = "100vh";
-body.addEventListener("click", () => console.log("Tıklama ıhh"));
+// const body = document.body;
+// body.style.height = "100vh";
+// body.addEventListener("click", () => console.log("Tıklama"));
 
 
-
-
-
-
-
+// TODO String
+let a = new String("Hello World!");
+console.log("new:",a);
+console.log("anchor:",a.anchor("deneme")); // Bağlantı adresi.
+console.log("big:",a.big()); // Büyük yazı.
+console.log("blink:",a.blink()); // Yanıp sönen yazı.
+console.log("bold:",a.bold()); // Kalın yazı.
+console.log("charAt:",a.charAt(0)); // index'e göre secilen karakteri alır.
+console.log("charCodeAt:",a.charCodeAt(0)); // index'e göre karakter kodunu getirir.
+console.log("codePointAt:",a.codePointAt(0)); // UTF-16 index'e göre karakter kotunu verir.
+console.log("concat:",a.concat("veri01","veri02","veri03")); // String ifadeleri birleştirir.
+console.log("endsWith:",a.endsWith("!")); // String veri ne ile bittiğini kontrol eder ve true veya false döndürür.
+console.log("fixed:", a.fixed()); // Html5 de desteklemez - Teletype yazı tipine cevirir.
+console.log("fontcolor:",a.fontcolor("red")); // Yazı rengini ekler.
+console.log("fontsize:",a.fontsize("55px")); // Yazı boyutunu ekler.
 
