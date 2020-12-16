@@ -131,6 +131,11 @@ function alerting () {
 // const body = document.body;
 // body.style.height = "100vh";
 // body.addEventListener("click", () => console.log("Tıklama"));
+// ! ----------------------------------------------
+// var vvv = document.getElementById("pTest");
+// vvv.addEventListener("click", () => {
+//     console.log("hi");
+// });
 
 
 // TODO String
@@ -148,4 +153,21 @@ console.log("endsWith:",a.endsWith("!")); // String veri ne ile bittiğini kontr
 console.log("fixed:", a.fixed()); // Html5 de desteklemez - Teletype yazı tipine cevirir.
 console.log("fontcolor:",a.fontcolor("red")); // Yazı rengini ekler.
 console.log("fontsize:",a.fontsize("55px")); // Yazı boyutunu ekler.
+console.log("includes:", a.includes("World",3)); // String veride arama yapar ve bulduğunda, true veya false döner, aramada atlama yapabilir.
+console.log("indexOf:", a.indexOf("World",3)); // String veride arama yapar ve verinin başlanğıcının index konumu verir ve atlama yapılabilir..
+console.log("italics:", a.italics()); // İtalik bir html etiketi oluşturur.
+console.log("lastIndexOf:", a.lastIndexOf("World")); // String veride sondan arama yapar ve verinin başlanğıcının index konumu verir ve atlama yapılabilir..
+console.log("length:", a.length); // Verinin kaç karakterden olduğunu yazdırır.
+console.log("link:", a.link("https://www.google.com/")); // A etiketinde link oluşturur, parametre olarak url alır.
+console.log("localeCompare:", a.localeCompare("hello")); // Karşılaştırmalarda, parametre değeri ile string değerindeki benzeşme 100% olursa sıfır(0) değeri döndürür, Karşılaştırmalarda,parametre değeri ile string değeri arasında kısmi benzeşmeler olursa 1 değeri döndürür, Karşılaştırmalarda,parametre değeri dize nesnesinin değerine hiç benzeşmiyorsa -1 döndürür.
+console.log("match:", a.match("Hello")); // Match fonksiyonu bize aranan kelimenin index konumunu ve aradığımız kelimeyi ve neleri aradığımızı verir ayrıyetten regexp de içinde uygulunabilir.
+console.log("matchAll:", a.matchAll("Hello").next()); // Match fonksiyonun aynısıdır sadece promise tipinde döner.
+console.log("normalize:", a.normalize()); // Veriyi normal bir string ifadeye veririr yapıcı fonksiyon halini bozar, bazı parametreler ile Unicode kodları dönüştürebilir.
+console.log("padEnd:", a.padEnd(3, "Geeks")); // Varsayılan değer belirlenebilir ve verinin kaç karakteri yazdıracağıda belirlenebilir.
+console.log("padStart:", a.padStart(3, "0")); // Varsayılan değer belirlenebilir ve verinin kaç kare kopyalanacağı belirlenebilir.
+console.log("repeat:", a.repeat(5)); // String ifadeyi tekrarlar.
+console.log("replace:", a.replace("Hello", "Kello")); // String veride ifadeyi bulur ve kendi atadığımız değer ile değiştirir ve regexp parametreleri kullanılabilir.
+console.log("replaceAll:", a.replaceAll("Hello", "Zello")); // String veride ifadeyi bulur ve kendi atadığımız değer ile değiştirir ve regexp parametreleri kullanılabilir ve tüm oluşumlarda veya globalde aramalar gerçekleştirir.
+
+
 
