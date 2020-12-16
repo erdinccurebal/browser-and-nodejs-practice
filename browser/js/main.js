@@ -55,7 +55,7 @@
 // let a = "Merhaba";
 // ({ name: a } = {name: "Erdinç"});
 // console.log(a);
-// // OR
+// OR
 // a = {name: "Melike"};
 // console.log(a.name);
 // ! ----------------------------------------------
@@ -63,9 +63,79 @@
 
 
 // TODO Htmle fonksiyonlarla hükmedelim.
-function changeHtml(){
- document.querySelector("h1");
- document.querySelector("p");
-}
+// function changeHtml({ h1: _h1, p: _p }){
+//  let h1 = document.querySelector("h1");
+//  let p = document.querySelector("p");
 
-changeHtml();
+//  h1.innerHTML = _h1;
+//  p.innerHTML = _p;
+// }
+// changeHtml({h1: "Browser Javascript practice", p: "Voluptate suscipit facere laudantium?"});
+// ! ----------------------------------------------
+
+// TODO Eventlerimiz.
+// const body = document.body;
+// body.onload = complatePage;
+
+// function complatePage() {
+//     console.log("Sayfa yüklendi.");
+// }
+// ! ----------------------------------------------
+/* const runTestButton = document.querySelector("#runTest");
+runTestButton.onload = alerting;
+
+function alerting () {
+    alert("hi");
+} */
+// ! ----------------------------------------------
+// const myInput = document.getElementById("testInput");
+// myInput.onchange = myInputFunction;
+
+// function myInputFunction (){
+//     console.log("degisti");
+// }
+// ! ----------------------------------------------
+// const runTest = document.getElementById("runTestButton");
+// let a = 20;
+// runTest.onmouseover = runTestFunction;
+
+// function runTestFunction() {
+//     setInterval(() => {
+//         a -= 5;
+//         runTest.style.padding = a + "px";
+//     },1500);
+//     setInterval(() => {
+//         a += 5;
+//         runTest.style.padding = a + "px";
+//     },2000);
+// }
+// ! ----------------------------------------------
+// const runTest = document.getElementById("runTestButton");
+// runTest.onmouseover = buttonColorOver;
+// runTest.onmousedown = buttonColorDown;
+// runTest.onmouseout = buttonColorOut;
+
+// runTest.style.padding = "10px";
+// runTest.style.transition = "all ease 1s";
+
+// function buttonColorDown() {
+//     runTest.style.backgroundColor = "red";
+// }
+// function buttonColorOver() {
+//     runTest.style.backgroundColor = "yellow";
+// }
+// function buttonColorOut() {
+//     runTest.style.backgroundColor = "green";
+// }
+// ! ----------------------------------------------
+const body = document.body;
+body.style.height = "100vh";
+body.addEventListener("click", () => console.log("Tıklama ıhh"));
+
+
+
+
+
+
+
+
