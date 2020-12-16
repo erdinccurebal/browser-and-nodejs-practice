@@ -139,11 +139,11 @@ function alerting () {
 
 
 // TODO String
-let a = new String("Hello World!");
+let a = new String("   Hello World!   ");
 console.log("new:",a);
 console.log("anchor:",a.anchor("deneme")); // Bağlantı adresi.
 console.log("big:",a.big()); // Büyük yazı.
-console.log("blink:",a.blink()); // Yanıp sönen yazı.
+console.log("blink:",a.blink()); // Yanıp sönen yazı. Html5 kaldırıldı.
 console.log("bold:",a.bold()); // Kalın yazı.
 console.log("charAt:",a.charAt(0)); // index'e göre secilen karakteri alır.
 console.log("charCodeAt:",a.charCodeAt(0)); // index'e göre karakter kodunu getirir.
@@ -166,8 +166,27 @@ console.log("normalize:", a.normalize()); // Veriyi normal bir string ifadeye ve
 console.log("padEnd:", a.padEnd(3, "Geeks")); // Varsayılan değer belirlenebilir ve verinin kaç karakteri yazdıracağıda belirlenebilir.
 console.log("padStart:", a.padStart(3, "0")); // Varsayılan değer belirlenebilir ve verinin kaç kare kopyalanacağı belirlenebilir.
 console.log("repeat:", a.repeat(5)); // String ifadeyi tekrarlar.
-console.log("replace:", a.replace("Hello", "Kello")); // String veride ifadeyi bulur ve kendi atadığımız değer ile değiştirir ve regexp parametreleri kullanılabilir.
-console.log("replaceAll:", a.replaceAll("Hello", "Zello")); // String veride ifadeyi bulur ve kendi atadığımız değer ile değiştirir ve regexp parametreleri kullanılabilir ve tüm oluşumlarda veya globalde aramalar gerçekleştirir.
-
-
-
+console.log("replace:", a.replace("Hello", "Kello")); // String veride ifadeyi bulur ve kendi atadığımız değer ile değiştirir ve regexp parametreleri kullanılabilir, Tek bir ifade değiştirir.
+console.log("replaceAll:", a.replaceAll("Hello", "Zello")); // String veride ifadeyi bulur ve kendi atadığımız değer ile değiştirir ve regexp parametreleri kullanılabilir ve tüm oluşumlarda veya globalde aramalar gerçekleştirir, Bütün ifaleri değiştirir.
+console.log("search:", a.search(/hello/i)); // String de arama yapar, -1 ve 0 dönmektedir, -1 bulamadığını 1 ise bulduğunu gösterir, bu fonksiyonda regexp kullanılabilir.
+console.log("slice:", a.slice(2,5)); // Metinde kesme işlemi yapar 3 ile 5 arasını al demekdir. geriye bulduğu ifadeyi döner.
+console.log("small:", a.small(2,4)); // Html'de small etiketi oluşturur.
+console.log("split:", a.split(" ",3)); // Belirlenen ifade ile metini parçalar, ikinci parametrede ise kaç tane veri geleceğinin limiti belirlenebilir veya kaç ifadenin parçalanacağı.
+console.log("startsWith:", a.startsWith("World",6)); // String ifadenin ne ile başladığını kontrol eder ve true veya false geri döner ve atlama yapılabilir.
+console.log("strike:", a.strike()); // Html5 de desteği yoktur, Html de strike etiketi oluşturur.
+console.log("sub:", a.sub()); // Html de sub etiketi oluşturur, üslü sayılar için de kullanılabilir.
+console.log("substr:", a.substr(2,5)); // Belirtilen parametrelere göre metinin arasını alır, 2 başlangıç, 5 ise 2 den sonraki alıcan karakteri belirler.
+console.log("substring:", a.substring(2,5)); // Metinin arasını alır ve index numarasına göre 2,5 arasını al demektir.
+console.log("substring:", a.substring(2,5)); // Metinin arasını alır ve index numarasına göre 2,5 arasını al demektir.
+console.log("sup:", a.sup()); // Html de sup etiketi oluşturur, sayının tabanı olarakda ifade edilir.
+console.log("toLocaleLowerCase:", a.toLocaleLowerCase("en-US")); //  Dil karakterlerine göre düzeltme yaparak yapıyı kücültür.
+console.log("toLocaleUpperCase:", a.toLocaleUpperCase("en-US")); //  Dil karakterlerine göre düzeltme yaparak yapıyı büyültür.
+console.log("toLowerCase:", a.toLowerCase()); //  Bütün string veriyi küçük yapar.
+console.log("toString:", a.toString()); //  İfadeyi string türüne cevirir.
+console.log("toUpperCase:", a.toUpperCase()); //  Bütün string veriyi büyük yapar.
+console.log("trim:", a.trim()); //  Sağındaki solundaki boslukları siler.
+console.log("trimEnd:", a.trimEnd()); //  Sonundaki boslukları siler.
+console.log("trinLeft:", a.trimLeft()); //  Solundaki boşlukları siler.
+console.log("trimRight:", a.trimRight()); //  Sağındaki boşlukları siler.
+console.log("trimStart:", a.trimStart()); //  Başındaki boşlukları siler.
+console.log("valueOf:", a.valueOf()); //  İçindeki veriyi döner.
