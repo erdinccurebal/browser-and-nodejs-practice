@@ -1,0 +1,35 @@
+{
+  "name": "browser-and-nodejs-practice",
+  "version": "1.0.0",
+  "description": "Browser and nodejs practice.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "ls:start": "live-server --port=3000 --open=/browser",
+    "eslint:init": "eslint --init",
+    "eslint:fix": "eslint --fix ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erdinccurebal/browser-and-nodejs-practice.git"
+  },
+  "keywords": [
+    "browser",
+    "nodejs",
+    "practice"
+  ],
+  "author": "Erdinç Cürebal",
+  "license": "GNU",
+  "bugs": {
+    "url": "https://github.com/erdinccurebal/browser-and-nodejs-practice/issues"
+  },
+  "homepage": "https://github.com/erdinccurebal/browser-and-nodejs-practice#readme",
+  "devDependencies": {
+    "eslint": "^7.15.0",
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
