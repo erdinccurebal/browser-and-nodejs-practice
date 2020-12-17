@@ -139,7 +139,7 @@ function alerting () {
 
 
 // TODO String
-let a = new String("   Hello World!   ");
+// let a = new String("   Hello World!   ");
 // ! ----------------------------------------------
 // console.log("new:",a);
 // ! ----------------------------------------------
@@ -277,9 +277,9 @@ let a = new String("   Hello World!   ");
 
 
 // TODO Dizinler
-const arr01 = new Array(6,5,5,6,6);
-const arr02 = new Array("merhaba","nasılsın","burnun","merhabas");
-const arr03 = new Array(5,{name: "Erdinç"},"stringim",["4",5]);
+// const arr01 = new Array(3, 3, 3, 4, 4, 4);
+// const arr02 = new Array("merhaba", "nasılsın", "burnun", "merhabas");
+// const arr03 = new Array(5, { name: "Erdinç" }, "stringim", ["4", 5]);
 // ! ----------------------------------------------
 // console.log("concat:",arr01.concat(arr02,arr03)); // Dizinleri birleştirir.
 // ! ----------------------------------------------
@@ -343,7 +343,8 @@ const arr03 = new Array(5,{name: "Erdinç"},"stringim",["4",5]);
 // ! ---------------------------------------------
 // console.log("sort:", arr01.sort((a,b) => a - b)); // Dizinin içersinde verileri sıralar.
 // ! ---------------------------------------------
-// console.log("splice:", arr01.splice(1,2)); // Dizinin içersinde belirtilen parametre aralığını siler ve kalanları verir.
+// console.log("splice:", arr01.splice(1,2,"hello")); // Dizinin içersinde belirtilen parametre aralığını siler ve kalanları verir, 3 parametreden sonra args alır ve istenilen verileri içine eklenebilir. ana array içine ekler return olarakda silinenleri verir.
+// console.log(arr01);
 // ! ---------------------------------------------
 // console.log("toLocaleString:", arr01.toLocaleString("TR", { style: "currency", currency: "YTL" })); // Dizin verisini dile cevirir ve özellik olarakda para birimi eklenilebilir. 
 // ! ---------------------------------------------
@@ -353,4 +354,93 @@ const arr03 = new Array(5,{name: "Erdinç"},"stringim",["4",5]);
 // console.log("Şuanki veri:",arr01); // Dizinin anlık halidir, içine başından veri eklenmiştir.
 // ! ---------------------------------------------
 // console.log("values:", arr01.values().next().value); // Veriyi next ile tek tek çıkartır.
+
+
+// Boolean
+// const x = new Boolean(true);
+// console.log("new:",x);
+// ! ---------------------------------------------
+// console.log("toString:",x.toString()); // Veriyi string tipine cevirir.
+// ! ---------------------------------------------
+// console.log("valueOf:",x.valueOf()); // Veriyi cıkartır.
+// ! ---------------------------------------------
+// console.log(Boolean(4 > 5)); // Verinin doğru olup olmadığını kontrol eder. NaN gelen veriyi false cevirir, 0 = false, -0 = false, "" = false; undefined = false, false = false, 2 tane yapıcı fonksiyon aynı olsada false döndürür.
+
+// TODO Ecmascript6 eğerler.
+// const ifTest01 = true;
+// const ifTest02 = false;
+// ! ---------------------------------------------
+// if (ifTest) {
+//     console.log("if")
+// } else if (ifTest02) {
+//     console.log("else if")
+// } else {
+//     console.log("else")
+// }
+// ! ---------------------------------------------
+// if (ifTest01) {
+//     console.log("if")
+// } else if(ifTest02) {
+//     console.log("else if")
+// }
+// ! ---------------------------------------------
+// if (ifTest01) {
+//     console.log("if")
+// }
+// if (ifTest02) {
+//     console.log("if")
+// }
+// ! ---------------------------------------------
+// if (true || false) console.log("true"); else if ("bib") console.log("bib"); else console.log("else");
+// ! ---------------------------------------------
+// (true) && console.log("his");
+// (true) && console.log("hihi");
+// ! ---------------------------------------------
+// let x = "aaa";
+// x == "aaa" ? console.log("abc"): x == "bbb" ? console.log("bbb") : x == "ccc" ? console.log("ccc") : console.log("else");
+// ! ---------------------------------------------
+// let x = 0;
+// switch (x) {
+//     case 0:
+//         console.log(0);
+//         break;
+//     case 1: {
+//         console.log(0);
+//         break;
+//     }   
+//     default:
+//         console.log("else");
+//         break;
+// }
+
+
+// TODO For and ForEach
+/* for(let i = 0;i <= 10;i++){
+    console.log(i);
+} */
+// ! ---------------------------------------------
+// for(let i = 0;i <= 10;i++) console.log(i);
+// ! ---------------------------------------------
+// const x = ["bursa","istanbul","izmir","amasya"];
+// for(let i = 0; i < x.length; i++){
+//     console.log(x[i]);
+// }
+// ! ---------------------------------------------
+// const x = ["bursa","istanbul","izmir","amasya"];
+// for(c in x){
+//     console.log("INDEX: "+ c + " | " + "VALUE: " + x[c]);
+// }
+// ! ---------------------------------------------
+// const x = ["bursa","istanbul","izmir","amasya"];
+// x.forEach((item, index, full) => console.log(full[index] + " " + index));
+// ! ---------------------------------------------
+// const x = ["bursa","istanbul","izmir","amasya"];
+// x.forEach((item) => console.log(item));
+// ! ---------------------------------------------
+// const x = ["bursa","istanbul","izmir","amasya"];
+// for(let i = 0; i < x.length; i++){
+//     if (i == 2) continue;
+//     if (i == 3) break;
+//     console.log(x[i]);
+// }
 // ! ---------------------------------------------
