@@ -443,4 +443,101 @@ function alerting () {
 //     if (i == 3) break;
 //     console.log(x[i]);
 // }
+
+// TODO Tip Kontrol
+// console.log(typeof "John"); // Returns "string"
 // ! ---------------------------------------------
+// console.log(typeof 3.14); // Returns "number"
+// ! ---------------------------------------------
+// console.log(typeof NaN); // Returns "number"
+// ! ---------------------------------------------
+// console.log(typeof false); // Returns "boolean"
+// ! ---------------------------------------------
+// console.log(typeof [1,2,3,4]); // Returns "object"
+// ! ---------------------------------------------
+// console.log(typeof {name:"John", age:34}); // Returns "object"
+// ! ---------------------------------------------
+// console.log(typeof new Date()); // Returns "object"
+// ! ---------------------------------------------
+// console.log(typeof function () {}); // Returns "function"
+// ! ---------------------------------------------
+// console.log(typeof undefined); // Returns "undefined" *
+// ! ---------------------------------------------
+// console.log(typeof null ); // Returns "object"
+
+// TODO Promise
+// const users = [
+//     {id: 1, name: "Erdinç", surname: "Cürebal"},
+//     {id: 2, name: "Nurcan", surname: "Cürebal"},
+//     {id: 3, name: "Melike", surname: "Atasoy"},
+//     {id: 4, name: "Veli", surname: "Yavuz"},
+// ];
+
+// const promiseData = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         if (users == NaN || typeof users == "function" || typeof users == "string" || !(users[0])) {
+//             reject(new Error("Hatalı Parametre!!!"));
+//         } else {
+//             resolve(users);
+//         } 
+//     },2000); 
+// });
+
+// promiseData.then(data => {
+//     console.log(data);
+//     return data[1];
+// }).then(data => {
+//     console.log(data);
+// });
+
+
+// TODO Hatalar
+// try {
+//     console.log("BAŞARILI :" , testingFN(3));
+// } catch (error) {
+//     console.error("HATA: " + error);
+// } finally {
+//     console.log("Try Catch Çalıştı.");
+// }
+
+// function testingFN (number) {
+//     if (number < 5) throw "5 den kücük olamaz !!!";
+//     if (number > 10) throw "10 dan büyük olamaz !!!";
+//     if (typeof number == "string") throw "Veriyi string gönderemezsiniz!!!.";
+//     if (typeof number == "undefined") throw "Veri boş olamaz";
+//     return number;
+//}
+// ! ---------------------------------------------
+//TODO object
+const obje01 = { id: 1, name: "Erdinç", surname: "Cürebal" };
+const obje02 = { id: 2, name: "Nurcan", surname: "Cürebal" };
+const obje03 = { age: 29 };
+
+const newObje = new Object(obje01);
+console.log("new:", newObje);
+// ! ---------------------------------------------
+// console.log(newObje.hasOwnProperty("name")); // Propery'nin var olup olmadığını kontrol eder.
+// ! ---------------------------------------------
+// console.log(newObje.propertyIsEnumerable("name")); // Property enum olup olmadığını kontrol eder.
+// ! ---------------------------------------------
+// console.log(newObje.toLocaleString()); // Dile göre string'e dönüştürür.
+// ! ---------------------------------------------
+// const vvv = JSON.stringify(newObje); 
+// console.log(vvv); // Veriyi okunabilir stringe cevirir.
+// ! ---------------------------------------------
+// console.log(newObje.valueOf()); // Objeyi instance'dan cıkartır.
+// ! ---------------------------------------------
+// console.log(Object.assign({},obje01, obje03)); // Propertileri birleştirir, aynı isimde property varsa üstüne yazar.
+
+// TODO Fonksiyonlar
+function Foo() {
+    console.log(Foo.caller.name);
+}
+
+function Bar() {
+    Foo();
+}
+
+Bar();
+
+
