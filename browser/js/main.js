@@ -617,19 +617,28 @@ function alerting () {
 
 
 
-window.addEventListener("scroll", () => {
-    let newScroolY01 = (window.scrollY + 100).toString(16);
-    let newScroolY02 = "#"+newScroolY01 + newScroolY01;
-    document.body.style.transition = "all ease 1s";
-    document.body.style.backgroundColor = newScroolY02;
-    if (window.scrollY < 100) document.body.style.backgroundColor = "white";
-    document.getElementById("divTest01").style.width = window.scrollY+"px";
-    document.getElementById("divTest01").style.height = window.scrollY+"px";
-    if (window.scrollY > 1520) {
-        document.getElementById("divTest02").style.width = ( window.scrollY - 1520)+"px";
-        document.getElementById("divTest02").style.height = (window.scrollY - 1520)+"px";
-    }
-    if (window.scrollY < 1520) document.getElementById("divTest02").style.width = 0+"px";
 
 
-});
+
+
+
+
+
+
+
+// TODO Egzersizlerimiz
+// window.addEventListener("scroll", () => {
+//     let newScroolY01 = (window.scrollY + 100).toString(16);
+//     let newScroolY02 = "#"+newScroolY01 + newScroolY01;
+//     document.body.style.transition = "all ease 1s";
+//     document.body.style.backgroundColor = newScroolY02;
+//     if (window.scrollY < 100) document.body.style.backgroundColor = "white";
+//     document.getElementById("divTest01").style.width = window.scrollY+"px";
+//     document.getElementById("divTest01").style.height = window.scrollY+"px";
+//     if (window.scrollY > 1520) {
+//         document.getElementById("divTest02").style.width = ( window.scrollY - 1520)+"px";
+//         document.getElementById("divTest02").style.height = (window.scrollY - 1520)+"px";
+//     }
+//     if (window.scrollY < 1520) document.getElementById("divTest02").style.width = 0+"px";
+// });
+// ! ---------------------------------------------
