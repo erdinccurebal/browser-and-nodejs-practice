@@ -465,7 +465,7 @@ function alerting () {
 // ! ---------------------------------------------
 // console.log(typeof null ); // Returns "object"
 
-// TODO Promise
+// TODO Promise söz vermek, then catch
 // const users = [
 //     {id: 1, name: "Erdinç", surname: "Cürebal"},
 //     {id: 2, name: "Nurcan", surname: "Cürebal"},
@@ -508,7 +508,11 @@ function alerting () {
 //     return number;
 //}
 // ! ---------------------------------------------
-//TODO object
+//TODO Objeler
+// * configurable => False ise silinemez ve değiştirilemez.
+// * enumerable => False ise for/in özelliğini kapatır.
+// * value => Girilecek ana değer.
+// * writable => Değer sabit olur , değiştirilemez.
 const obje01 = { id: 1, name: "Erdinç", surname: "Cürebal" };
 const obje02 = { id: 2, name: "Nurcan", surname: "Cürebal" };
 const obje03 = { age: 29 };
@@ -516,28 +520,65 @@ const obje03 = { age: 29 };
 const newObje = new Object(obje01);
 console.log("new:", newObje);
 // ! ---------------------------------------------
-// console.log(newObje.hasOwnProperty("name")); // Propery'nin var olup olmadığını kontrol eder.
+// console.log("hasOwnProperty:",newObje.hasOwnProperty("name")); // Propery'nin var olup olmadığını kontrol eder.
 // ! ---------------------------------------------
-// console.log(newObje.propertyIsEnumerable("name")); // Property enum olup olmadığını kontrol eder.
+// console.log("propertyIsEnumerable:",newObje.propertyIsEnumerable("name")); // Property enum olup olmadığını kontrol eder.
 // ! ---------------------------------------------
-// console.log(newObje.toLocaleString()); // Dile göre string'e dönüştürür.
+// console.log("toLocaleString:",newObje.toLocaleString()); // Dile göre string'e dönüştürür.
 // ! ---------------------------------------------
 // const vvv = JSON.stringify(newObje); 
-// console.log(vvv); // Veriyi okunabilir stringe cevirir.
+// console.log("stringify:",vvv); // Veriyi okunabilir stringe cevirir.
 // ! ---------------------------------------------
-// console.log(newObje.valueOf()); // Objeyi instance'dan cıkartır.
+// console.log("valueOf:",newObje.valueOf()); // Objeyi instance'dan cıkartır.
 // ! ---------------------------------------------
-// console.log(Object.assign({},obje01, obje03)); // Propertileri birleştirir, aynı isimde property varsa üstüne yazar.
+// console.log("assign:",Object.assign({},obje01, obje03)); // Propertileri birleştirir, aynı isimde property varsa üstüne yazar.
+// ! ---------------------------------------------
+// console.log("assign:",Object.create({id:5,name:"Erdinç"})); // Proto eklemesi yapar.
+// ! ---------------------------------------------
+// console.log("defineProperties:",Object.defineProperties(obje01,{property01: { value: "55", writable: true}})); // Kurallı property ekleme.
+// ! ---------------------------------------------
+// console.log("defineProperty:",Object.defineProperty(obje01, "language", { value: "TR", configurable: true })); // Kurallı tek property ekleme.
+// ! ---------------------------------------------
+// console.log("entries:",Object.entries(obje01)); // Dizin halinde düzenli parçalar.
+// ! ---------------------------------------------
+// let x = Object.entries(obje01);
+// let b = Object.freeze(obje01);
+// b.name = "xxxxxxxx";
+// console.log("freeze:",b); // Değiştirilemez obje yapar.
+// ! ---------------------------------------------
+// const x = new Map();
+// x.set("id",1);
+// x.set("name","Erdinç");
+// x.set("surname","Cürebal");
+// console.log(x.values());
+// console.log("fromEntries:",Object.fromEntries(x)); // Map tipini objeye cevirir.
+// ! ---------------------------------------------
+// console.log("getOwnPropertyDescriptor:",Object.getOwnPropertyDescriptor(obje01,"name")); // Objenin içersindeki property 'nin kurallarını verir.
+// ! ---------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
 
 // TODO Fonksiyonlar
-function Foo() {
-    console.log(Foo.caller.name);
-}
+// function Foo() {
+//     console.log(Foo.caller.name);
+// }
 
-function Bar() {
-    Foo();
-}
+// function Bar() {
+//     Foo();
+// }
 
-Bar();
+// Bar();
+
+
 
 
