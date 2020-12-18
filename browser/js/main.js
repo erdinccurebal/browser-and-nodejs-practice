@@ -513,12 +513,12 @@ function alerting () {
 // * enumerable => False ise for/in özelliğini kapatır.
 // * value => Girilecek ana değer.
 // * writable => Değer sabit olur , değiştirilemez.
-const obje01 = { id: 1, name: "Erdinç", surname: "Cürebal" };
-const obje02 = { id: 2, name: "Nurcan", surname: "Cürebal" };
-const obje03 = { age: 29 };
+// const obje01 = { id: 1, name: "Erdinç", surname: "Cürebal" };
+// const obje02 = { id: 2, name: "Nurcan", surname: "Cürebal" };
+// const obje03 = { age: 29 };
 
-const newObje = new Object(obje01);
-console.log("new:", newObje);
+// const newObje = new Object(obje01);
+// console.log("new:", newObje);
 // ! ---------------------------------------------
 // console.log("hasOwnProperty:",newObje.hasOwnProperty("name")); // Propery'nin var olup olmadığını kontrol eder.
 // ! ---------------------------------------------
@@ -555,17 +555,53 @@ console.log("new:", newObje);
 // ! ---------------------------------------------
 // console.log("getOwnPropertyDescriptor:",Object.getOwnPropertyDescriptor(obje01,"name")); // Objenin içersindeki property 'nin kurallarını verir.
 // ! ---------------------------------------------
+// console.log("getOwnProsspertyDescriptors:",Object.getOwnPropertyDescriptors(obje01)); // Objenin içersindeki propertylerin hepsinin kurallarını yazdırır.
+// ! ---------------------------------------------
+// console.log("getOwnProsspertyDescriptors:",Object.getOwnPropertyDescriptors(obje01)); // Objenin içersindeki propertylerin hepsinin kurallarını yazdırır.
+// ! ---------------------------------------------
+// console.log("getOwnPropertyNames:",Object.getOwnPropertyNames(obje01)); // Propertyleri dizin halinde alır.
+// ! ---------------------------------------------
+// console.log("getOwnPropertyNames:",Object.getOwnPropertyNames(obje01)); // Propertyleri isimlerini dizin halinde alır.
+// ! ---------------------------------------------
+// console.log("getOwnPropertySymbols:",Object.getOwnPropertySymbols(obje01)); // Propertyleri sembollerini dizin halinde alır.
+// ! ---------------------------------------------
+// let proto = {id:01};
+// let obj = Object.create(proto);
+// console.log("getPrototypeOf:",Object.getPrototypeOf(obj)); // Objenin içerisinden prototype cıkartır.
+// ! ---------------------------------------------
+// const x = {id: 1, name: "Erdinç"};
+// const y = {id: 1, name:  "Erdinç"};
+// console.log("is:",Object.is(y,y)); // Tipinin eşitliği değil veya değerlerin eşitliği değil iki objeninde aynı yerden çıkmış olması gerekmektedir.
+// ! ---------------------------------------------
+// console.log("isExtensible:",Object.isExtensible(obje01)); // Dışardan özellik almış mı almışsa false döner.
+// ! ---------------------------------------------
+// console.log("isFrozen:",Object.isFrozen(obje01)); // Obje dondurulmuşmu bakılır.
+// ! ---------------------------------------------
+// console.log("isSealed:",Object.isSealed(obje01)); // Seal özelliğini kontrol eder.
+// ! ---------------------------------------------
+// console.log("keys:",Object.keys(obje01)); // Keyleri dizin halinde yazdırır.
+// ! ---------------------------------------------
+// console.log("preventExtensions:",Object.preventExtensions(obje01)); // Yeni gelen özellikleri engeller.
+// ! ---------------------------------------------
+// console.log("seal:",Object.seal(obje01)); // Seal özelliği eklendikten sonra bir veri silinirse ve silinmeden önce bir veri eklendiyse sealdan sonraki aldığı değeri gösterir ve veri silinmez.
+// ! ---------------------------------------------
+// let Animal = {
+//     makeSound() {
+//       console.log(`${this.name}, ${this.sound}!`);
+//     },
+//   };
+//   function Dog(name) {
+//     this.name = name;
+//     this.sound = "bark";
 
-
-
-
-
-
-
-
-
-
-
+//     Object.setPrototypeOf(this, Animal);
+//   }
+  
+//   dog1 = new Dog("Marcus");
+  
+//   dog1.makeSound(); // Prototype set eder ve değiştirir.
+// ! ---------------------------------------------
+// console.log("values:",Object.values(obje01)); // Objenin içerindeki valueri veya değerleri dizin halinde yazdırır.
 
 
 // TODO Fonksiyonlar
@@ -581,4 +617,19 @@ console.log("new:", newObje);
 
 
 
+window.addEventListener("scroll", () => {
+    let newScroolY01 = (window.scrollY + 100).toString(16);
+    let newScroolY02 = "#"+newScroolY01 + newScroolY01;
+    document.body.style.transition = "all ease 1s";
+    document.body.style.backgroundColor = newScroolY02;
+    if (window.scrollY < 100) document.body.style.backgroundColor = "white";
+    document.getElementById("divTest01").style.width = window.scrollY+"px";
+    document.getElementById("divTest01").style.height = window.scrollY+"px";
+    if (window.scrollY > 1520) {
+        document.getElementById("divTest02").style.width = ( window.scrollY - 1520)+"px";
+        document.getElementById("divTest02").style.height = (window.scrollY - 1520)+"px";
+    }
+    if (window.scrollY < 1520) document.getElementById("divTest02").style.width = 0+"px";
 
+
+});

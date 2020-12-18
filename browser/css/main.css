@@ -3,3 +3,33 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    height: 10000vh;
+}
+
+#divTest01{
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: red;
+    height: 0;
+    width: 0;
+}
+
+#divTest02{
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: blue;
+    height: 0;
+    width: 0;
+}
