@@ -857,6 +857,23 @@ function alerting () {
 // function myWrite () {
 //     console.log("CLICK");
 // }
+// !-------------------------------------------------------
+// const h1 = document.createElement("h1");
+// h1.innerText = "HEADER 1";
+// h1.setAttribute("class","asda");
+// console.log(h1.attributes[0].specified);
+// document.body.appendChild(h1);
+// !-------------------------------------------------------
+// document.open();
+// document.write("<h1>Hello World</h1>");
+// document.close();
+// !-------------------------------------------------------
+// document.designMode = "on";
+// !-------------------------------------------------------
+
+
+
+
 
 // TODO Console 
 // var myObj = { firstname : "John", lastname : "Doe" };
@@ -964,3 +981,82 @@ function alerting () {
 // localStorage.clear(); // LocalStorage'deki bütün verileri siler.
 // !-------------------------------------------------------
 // sessionStorage.clear(); // SessionStorage'deki bütün verileri siler.
+
+// TODO Canvas
+// const myCanvas = document.getElementById("myCanvas");
+// const ctx = myCanvas.getContext("2d");
+// ctx.moveTo(50, 50);
+// ctx.lineTo(150, 50);
+// ctx.stroke();
+// !-------------------------------------------------------
+// document.body.style.backgroundColor = "grey";
+// const elementCanvas = document.createElement("canvas");
+// elementCanvas.setAttribute("id", "myCanvas");
+// elementCanvas.style.backgroundColor = "white";
+// elementCanvas.style.width = "400px";
+// elementCanvas.style.height = "400px";
+// elementCanvas.style.position = "absolute";
+// elementCanvas.style.margin = "auto";
+// elementCanvas.style.top = "0";
+// elementCanvas.style.bottom = "0";
+// elementCanvas.style.left = "0";
+// elementCanvas.style.right = "0";
+// elementCanvas.style.border = "2px solid black";
+// elementCanvas.style.borderRadius = "100%";
+// document.body.appendChild(elementCanvas);
+// var myCanvas = document.getElementById("myCanvas");
+
+// var ctx = myCanvas.getContext("2d");
+// ctx.beginPath();
+// ctx.arc(150, 75, 50, 0, 2 * Math.PI);
+// ctx.stroke();
+
+// !-------------------------------------------------------
+// document.body.style.backgroundColor = "grey";
+// const elementCanvas = document.createElement("canvas");
+// elementCanvas.setAttribute("id", "myCanvas");
+// elementCanvas.style.backgroundColor = "white";
+// elementCanvas.style.width = "400px";
+// elementCanvas.style.height = "400px";
+// elementCanvas.style.position = "absolute";
+// elementCanvas.style.margin = "auto";
+// elementCanvas.style.top = "0";
+// elementCanvas.style.bottom = "0";
+// elementCanvas.style.left = "0";
+// elementCanvas.style.right = "0";
+// elementCanvas.style.border = "2px solid black";
+// elementCanvas.style.borderRadius = "100%";
+// document.body.appendChild(elementCanvas);
+// var myCanvas = document.getElementById("myCanvas");
+
+// var c = document.getElementById("myCanvas");
+// var ctx = c.getContext("2d");
+// ctx.font = "30px Arial";
+// ctx.strokeText("Hello World", 50, 85);
+// !-------------------------------------------------------
+// document.body.style.backgroundColor = "grey";
+// const elementCanvas = document.createElement("canvas");
+// elementCanvas.setAttribute("id", "myCanvas");
+// elementCanvas.style.backgroundColor = "white";
+// elementCanvas.style.width = "400px";
+// elementCanvas.style.height = "400px";
+// elementCanvas.style.position = "absolute";
+// elementCanvas.style.margin = "auto";
+// elementCanvas.style.top = "0";
+// elementCanvas.style.bottom = "0";
+// elementCanvas.style.left = "0";
+// elementCanvas.style.right = "0";
+// elementCanvas.style.border = "2px solid black";
+// elementCanvas.style.borderRadius = "100%";
+// document.body.appendChild(elementCanvas);
+// var myCanvas = document.getElementById("myCanvas");
+
+// var c = document.getElementById("myCanvas");
+// var ctx = c.getContext("2d");
+
+// var grd = ctx.createLinearGradient(0, 0, 200, 0);
+// grd.addColorStop(0, "red");
+// grd.addColorStop(1, "white");
+
+// ctx.fillStyle = grd;
+// ctx.fillRect(50, 50, 200, 75);
