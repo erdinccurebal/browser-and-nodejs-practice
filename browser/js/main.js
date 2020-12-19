@@ -356,7 +356,7 @@ function alerting () {
 // console.log("values:", arr01.values().next().value); // Veriyi next ile tek tek çıkartır.
 
 
-// Boolean
+// TODO Boolean
 // const x = new Boolean(true);
 // console.log("new:",x);
 // ! ---------------------------------------------
@@ -596,9 +596,9 @@ function alerting () {
 
 //     Object.setPrototypeOf(this, Animal);
 //   }
-  
+
 //   dog1 = new Dog("Marcus");
-  
+
 //   dog1.makeSound(); // Prototype set eder ve değiştirir.
 // ! ---------------------------------------------
 // console.log("values:",Object.values(obje01)); // Objenin içerindeki valueri veya değerleri dizin halinde yazdırır.
@@ -614,16 +614,110 @@ function alerting () {
 // }
 
 // Bar();
+// ! ---------------------------------------------
+// document.getElementById("myFormSubmit").onclick = myForm;
+
+// function myForm(){
+//     const form = document.forms["myForm"]["username"].validity.valid;
+//     console.log(form);
+// }
+// ! ---------------------------------------------
+// function myFunction(){
+//     var args = Array.from(arguments);
+
+//     args.forEach(function (el) {
+//         console.log(el);
+//     });
+// }
+
+// myFunction("merhaba","selam");
+// ! ---------------------------------------------
+// var objeFunc = {
+//     fullName: function () {
+//         return this.firstName + " " + this.lastName;
+//     }
+// };
+
+// var person1 = {
+//     firstName: "John",
+//     lastName: "Doe"
+// };
+
+// var person2 = {
+//     firstName: "Mary",
+//     lastName: "Doe"
+// };
+// objeFunc.fullName.call(person1);
+// ! ---------------------------------------------
+// var myFunObje = {
+//     fullName: function (city, country) {
+//         return this.firstName + " " + this.lastName + "," + city + "," + country;
+//     }
+// };
+// var person1 = {
+//     firstName: "John",
+//     lastName: "Doe"
+// };
+// myFunObje.fullName.call(person1, "Oslo", "Norway");
+// ! ---------------------------------------------
+// var person = {
+//     fullName: function (city, country) {
+//         return this.firstName + " " + this.lastName + "," + city + "," + country;
+//     }
+// };
+// var person1 = {
+//     firstName: "John",
+//     lastName: "Doe"
+// };
+// person.fullName.apply(person1, ["Oslo", "Norway"]);
+
+// ! ---------------------------------------------
+// function myFunc(a,b,c){
+
+//     c("Hata");
+//     return a+b;
+// };
+
+// console.log(myFunc(5,6, (message) => {
+//     throw "Bu olmadı";
+// }));
 
 
 
+// TODO Classes
+// class TestClass{
+//     constructor(name,surname){
+//         this.name = name;
+//         this.surname = surname;
+//     }
 
+//     yazdir(){
+//         return this.name + " " + this.surname + " " + this.age;
+//     }
 
+//     static staticWrite(a,b){
+//         return a+b;
+//     }
 
+//     static set setiti(x){
+//         this.age = x;
+//     }
 
+//     static get getWrite(){
+//         return this.age;
+//     }
+// }
 
+// TestClass.setiti = 15;
+// console.log(TestClass.getWrite);
 
+// const testClass = new TestClass("Erdinç", "Cürebal");
+// console.log(testClass.yazdir());
 
+// const testClass01 = new TestClass("Nurcan", "Cürebal");
+// console.log(testClass01.yazdir());
+
+// console.log(TestClass.staticWrite(5,6));
 
 
 // TODO Egzersizlerimiz
@@ -642,3 +736,231 @@ function alerting () {
 //     if (window.scrollY < 1520) document.getElementById("divTest02").style.width = 0+"px";
 // });
 // ! ---------------------------------------------
+// class Car {
+//     constructor(brand) {
+//         this.carname = brand;
+//     }
+//     present() {
+//         return "I have a " + this.carname;
+//     }
+// }
+
+// class Model extends Car {
+//     constructor(brand, mod) {
+//         super(brand);
+//         this.model = mod;
+//     }
+//     show() {
+//         return this.present() + ", it is a " + this.model;
+//     }
+// }
+
+// let myCar = new Model("Ford", "Mustang");
+
+
+// TODO DOM
+// document.body.onload = onload;
+// function onload() {
+//     console.log("Sayfa yüklendikten sonra javascript uygulandı.");
+// }
+// ! ---------------------------------------------
+// console.log(document.baseURI); // Sunucu url geri döner.
+// console.log(document.body); // Body'inin içini döner.
+// console.log(document.doctype); // Html versionunu verir.
+// console.log(document.documentElement); // Html'inin içini döner.
+// console.log(document.documentURI); // Bulunduğunuz url geri döner.
+// console.log(document.domain); // Domaini geri döner.
+// console.log(document.head); // Head'inin içini döner.
+// console.log(document.readyState); // Sayfanın loading olduğunu verir.
+// console.log(document.scripts); // Js hakkında detaylı bilgi verir.
+// console.log(document.title); // Sayfa başlığını döner.
+// console.log(document.URL); // Bütün url verir.
+// !---------------------------------------------------
+// function deneme() {
+//     const x=document.activeElement.tagName;
+//     console.log(x);}; //aktif olan tagı gösterir
+// !-------------------------------------------------
+// document.addEventListener("click",function() {
+//     document.body.style.background="red";
+// }); //herhangi bir etkinlik eklenebilir
+// !-------------------------------------------------------
+// console.log(document.adoptNode());//iframede ki başllıkları çeker
+// !-------------------------------------------------------
+// console.log(document.characterSet);// belgenin hangi kod diliyle yazıldığını gösterir.
+// !-------------------------------------------------------
+// let x = document.getElementsByTagName("h1")[0].innerHTML;
+// console.log(x);
+// !-------------------------------------------------------
+// document.getElementsByTagName("h1")[0].attributes.class.value = "red";
+// document.getElementById("prag").attributes.class.value = "red";
+// !-------------------------------------------------------
+// document.getElementById("prag").style.color = "red";
+// !-------------------------------------------------------
+// document.getElementById("prag").setAttribute("class","red");
+// !-------------------------------------------------------
+// let title = document.createElement("h1");
+// title.innerText = "Javascript DOM Practice";
+// document.body.appendChild(title);
+
+// let prag01 = document.createElement("p");
+// prag01.innerText = "Adipisicing elit. A, minus.";
+// document.body.appendChild(prag01);
+
+// let prag02 = document.createElement("p");
+// prag02.innerText = "Amet consectetur adipisicing elit.";
+// document.body.replaceChild(prag02
+//     ,prag01);
+
+// let prag03 = document.createElement("p");
+// prag03.innerText = "Lorem ipsum dolor sit.";
+// document.body.appendChild(prag03);
+// document.body.removeChild(prag03);
+
+// document.write("<h3>Testing</h3>");
+// !-------------------------------------------------------
+// let baslik = document.createElement("h1");
+// baslik.innerText = "Merhaba Dünya!!!";
+// document.body.appendChild(baslik);
+// baslik.onclick = () => console.log("naber");
+// !-------------------------------------------------------
+// const title = document.createElement("h2");
+// title.innerText = "Hello World!!!";
+// title.setAttribute("id","testigi");
+// document.body.appendChild(title);
+// const queryTest = document.body.querySelector("#testigi");
+// queryTest.style.color = "red";
+// !-------------------------------------------------------
+// const prag01 = document.createElement("p");
+// const prag02 = document.createElement("p");
+// prag01.innerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. ";
+// prag02.innerText = "Eveniet, earum? Voluptatibus a harum quos assumenda corrupti ipsa sed nostrum suscipit!";
+
+// document.body.appendChild(prag01);
+// document.body.appendChild(prag02);
+
+// const x = document.body.querySelectorAll("p")[0];
+// const y = document.body.querySelectorAll("p")[1];
+// x.innerText = y.outerText;
+
+// for(let i = 0; i < 5; i++) document.write(y.outerText+ "<br>");
+// !-------------------------------------------------------
+// document.write("<button id=\"mySend\">SEND</button>");
+// document.write("<button id=\"myStop\">RESET</button>");
+// const mySend = document.querySelector("#mySend");
+// const myStop = document.querySelector("#myStop");
+
+// mySend.addEventListener("click", myWrite);
+// myStop.addEventListener("click", () => {
+//     mySend.removeEventListener("click", myWrite);
+// });
+
+// function myWrite () {
+//     console.log("CLICK");
+// }
+
+// TODO Console 
+// var myObj = { firstname : "John", lastname : "Doe" };
+// console.assert(document.getElementById("demo"), myObj); // Html elementi kontrol eder ve eğer yoksa girilen ikinci parametredeki hatayı döner.
+// !-------------------------------------------------------
+// console.clear(); // Console ekranını temizler.
+// !-------------------------------------------------------
+// for (i = 0; i < 10; i++) {
+//     console.count(); // Bu komut girildikce console da sayı sayar.
+// }
+// !-------------------------------------------------------
+// let x = "Lorem ipsun";
+// console.error("ERROR: ", x);
+// !-------------------------------------------------------
+// console.log("Hello world!");
+// console.group(); // Logları gruplandırır.
+// console.log("Hello again, this time inside a group!");
+// console.log("Hello again, this time inside a group!");
+// !-------------------------------------------------------
+// console.log("Hello world!");
+// console.groupCollapsed(); // Başlangıç.
+// console.log("Hello again, this time inside a collapsed group!");
+// console.groupEnd(); // Bitiş, Logları veya hataları gruplandırır. başlangıç ve bitişi vardır.
+// !-------------------------------------------------------
+// console.info("Hello world!"); // Bilgi verme amacı ile kullanılır.
+// !-------------------------------------------------------
+// console.log("Hello world!"); // Log kayıtlarını yazdırmak için kullanılır. işlem kayıtı.
+// !-------------------------------------------------------
+// console.table(["Audi", "Volvo", "Ford"]); // Console ekranında tablo yapar.
+// !-------------------------------------------------------
+// console.time(); // Console ekranını başlama zamanı.
+// for (i = 0; i < 100000; i++) {
+// }
+// console.timeEnd(); // Console ekranının bitiş zamanı.
+// !-------------------------------------------------------
+// function myFunction() {
+//     myOtherFunction();
+// }
+
+// function myOtherFunction() {
+//     console.trace("adas"); // Çalışan fonksiyonu yakalar.
+// }
+
+// myFunction();
+// !-------------------------------------------------------
+// console.warn("WARN:", "Bu bir uyarıdır."); // Uyarı atmak için kullanılır.
+
+
+// TODO Navigation
+// const x = navigator.geolocation;
+// x.getCurrentPosition(position => {
+//     console.log("latitude:",position.coords.latitude);
+//     console.log("longitude:",position.coords.longitude);
+//     console.log("altitude:",position.coords.altitude);
+//     console.log("accuracy:",position.coords.accuracy);
+//     console.log("altitudeAccuracy:",position.coords.altitudeAccuracy);
+//     console.log("heading:",position.coords.heading);
+//     console.log("speed:",position.coords.speed);
+// }); // Mevcut konum hakkında bilgiler alır.
+
+
+// TODO History
+// history.back(); // Mevcut bulunan sayfada bir önceki sayfaya geçiş yapar.
+// !-------------------------------------------------------
+// history.forward(); // Back tam tersi işlemini yapar, geçmişe girilmiş sayfada ileri gider.
+// !-------------------------------------------------------
+// history.go(); // Negatif veya Pozitif parametre almaktadır, geri veya ileri gider.
+// !-------------------------------------------------------
+// console.log(history.length); // History geçmişine bakar.
+
+
+// TODO Storage - Cookie
+// var x = localStorage.key(0); // LocalStorage'de index bağlı cekme işlemi yapar.
+// console.log(x); 
+// !-------------------------------------------------------
+// sessionStorage.key(0); // SessionStorage'de index bağlı cekme işlemi yapar.
+// console.log(x); 
+// !-------------------------------------------------------
+// var x = localStorage.length; // LocalStorage kaç verinin olup olmadığına bakar.
+// console.log(x); 
+// !-------------------------------------------------------
+// var x = sessionStorage.length; // LocalStorage kaç verinin olup olmadığına bakar.
+// console.log(x); 
+// !-------------------------------------------------------
+// var x = localStorage.getItem("name");
+// console.log(x); 
+// !-------------------------------------------------------
+// var x = sessionStorage.getItem("name");
+// console.log(x); 
+// !-------------------------------------------------------
+// const b = {id: 1, name: "Erdinç", surname: "Cürebal"}; // Verimiz.
+// const x = localStorage.setItem("account", JSON.stringify(b)); // ls Yüklüyoruz.
+// const y = localStorage.getItem("account"); // ls'den cekiyoruz.
+// console.log(JSON.parse(y)); // parse edip console yazdırıyoruz.
+// !-------------------------------------------------------
+// const b = {id: 1, name: "Erdinç", surname: "Cürebal"}; // Verimiz.
+// const x = sessionStorage.setItem("account", JSON.stringify(b)); // ss Yüklüyoruz.
+// const y = sessionStorage.getItem("account"); // ss'den cekiyoruz.
+// console.log(JSON.parse(y)); // parse edip console yazdırıyoruz.
+// !-------------------------------------------------------
+// localStorage.removeItem("veriIsmi"); // İsme bağlı veri silme.
+// !-------------------------------------------------------
+// sessionStorage.removeItem("veriIsmi"); // İsme bağlı veri silme.
+// !-------------------------------------------------------
+// localStorage.clear(); // LocalStorage'deki bütün verileri siler.
+// !-------------------------------------------------------
+// sessionStorage.clear(); // SessionStorage'deki bütün verileri siler.
